@@ -1,4 +1,4 @@
-/* Bryce's Branch */
+
 
 #flex_first {
     display: flex;
@@ -46,7 +46,6 @@
 }
 
 #grid_first > div {
-    background: #EDE7F6;
     padding: 1.5rem;
     border-radius: 1rem;
 }
@@ -187,9 +186,52 @@
 }
 
 
+#grid_second {
+    display: grid;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        "box1 box1 box1 box1 box1 box1"
+        "box2 box2 box3 box3 box4 box4"
+        "box5 box5 box6 box6 box7 box7"
+        "box8 box8 box9 box9";
+        justify-content: stretch;
+}
+
+.box1 {
+    grid-area: box1;
+    height: 100px;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.box2, .box3, .box4, .box5,
+.box6, .box7, .box8, .box9 {
+    height: 100px;
+    min-width: 400px;
+}
+
+.flex_div {
+    display: inline-flex;
+    min-width: fit-content;
+    font-size: small;
+}
 
 
-
-
-
-
+/* ----------- Non-Retina Screens ----------- 
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+      #grid_second{
+          display: grid;
+          display: grid;
+          grid-template-columns: 200px 200px 200px;
+          grid-template-rows: 100px;
+          grid-template-areas: 
+          "box1 box1 box1"
+          "box2 box3 box4"
+          "box5 box6 box7"
+          "box8 box9";
+          justify-content: stretch;
+}*/
