@@ -2,10 +2,29 @@
 
 #flex_first {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-top: 10px;
 }
 
 #flex_second {
     display: flex;
+
+}
+
+#flex_second form {
+    width: 100%;
+}
+
+.form-row{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-row fieldset{
+    display:flex;
+    flex-direction:column;
 }
 
 #grid_first {
