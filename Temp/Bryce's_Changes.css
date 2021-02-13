@@ -1,0 +1,77 @@
+
+
+#flex_first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    margin-top: 1rem;
+}
+
+#flex_second {
+    display: flex;
+
+}
+
+#flex_second form {
+    width: 100%;
+}
+
+.form-row{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-row fieldset{
+    display:flex;
+    flex-direction:column;
+}
+
+#grid_first {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        grid-template-areas: 
+        "box1 box1 box1 box1 box1 box1"
+        "box2 box2 box3 box3 box4 box4"
+        "box5 box5 box6 box6 box7 box7"
+        "box8 box8 box9 box9";
+        justify-content: stretch;
+}
+
+#grid_first > div {
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+
+#grid_second {
+    display: grid;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        "box1 box1 box1 box1 box1 box1"
+        "box2 box2 box3 box3 box4 box4"
+        "box5 box5 box6 box6 box7 box7"
+        "box8 box8 box9 box9";
+        justify-content: stretch;
+}
+
+.box1 {
+    grid-area: box1;
+    height: 100px;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.box2, .box3, .box4, .box5,
+.box6, .box7, .box8, .box9 {
+    height: 100px;
+    min-width: 400px;
+}
+
+.flex_div {
+    display: inline-flex;
+    min-width: fit-content;
+    font-size: small;
+}
